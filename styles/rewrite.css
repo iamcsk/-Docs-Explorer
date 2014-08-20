@@ -1,0 +1,32 @@
+/*$Id$*/
+	*{
+	background-image:url('ui-zgrey-pattern.png');
+	/*border: 1px solid #d8d8d8;*/
+}
+#home{
+	background-image:url('docs.ico');
+	width: 15px;
+	height: 15px;
+	zoom:1.2;
+}
+
+td{
+	padding: 4px;
+}
+
+#title{
+	align:center;
+	
+}
+
+#nav{
+	font-size: 15px;
+
+}
+
+#tbar{
+	border-bottom: 1px solid #d8d8d8;
+}
+table{
+	background: transparent;
+}

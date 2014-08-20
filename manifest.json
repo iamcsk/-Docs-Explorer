@@ -1,0 +1,30 @@
+{
+	"name"					:	"Zoho Docs",
+	"description"			:	"Zoho Docs Explorer",	
+	"manifest_version"		:	2,
+	"version"				:	"0.1.4",
+	"minimum_chrome_version": 	"25",
+	"app"					:	{
+		"background"		:	{
+			"scripts"		:	["index.js"]
+		}		
+	},
+	"icons"					:	{
+		"128"				:	"icons/docs.png"
+	},
+	"permissions"			:	[
+			"webview",
+			"geolocation",
+    		"storage",
+    		"<all_urls>",
+			"notifications",
+			"unlimitedStorage",
+			"storage",
+			"identity",
+            "contextMenus",
+            "audio",
+            "downloads",
+            {"mediaGalleries": ["read", "allAutoDetected"] }
+	]
+}
+

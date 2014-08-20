@@ -1,0 +1,178 @@
+
+.formulaInputBox{
+    height: 18px;
+    overflow: hidden;
+    padding: 0px 6px 0px 6px;
+    outline: 0 solid transparent;
+    right: 10px;
+    width: auto;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(180, 180, 180);
+    -webkit-border-radius: 2px;
+    width: 96%;
+    margin-top: 2px;
+
+}
+
+.toolbar > div{
+    display: inline-block;
+}
+
+.formulaSymbol{
+    width: 35px;
+    height: inherit;
+    font-style: italic;
+    font-family: cursive;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.actionsBar {
+    width:100%;
+    height:28px;
+    position:relative;
+    display:flex;
+    display: -webkit-box;
+    align-items:center;
+    flex-direction:row;
+    line-height:30px;
+    font-size:20px;
+    border-top: 1px solid rgb(180, 180, 180);
+    background:  rgb(216, 216, 216);
+}
+
+.actionsBar > div {
+    display: inline-block;
+}   
+
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+
+.underline{
+    text-decoration:underline;
+}
+.strikethrough{
+    text-decoration:line-through;    
+}
+
+.btn{
+    width:30px;
+    text-align:center;     
+    height: inherit;
+    display: -webkit-box;
+    display: flex;
+    vertical-align: text-bottom;
+    font-size: medium;
+}
+.btn:hover{
+    background:gray;
+    background: rgb(199, 196, 196);
+    border-radius: 5px;
+}
+
+
+select {
+    padding:3px;
+    margin: 10px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    position: relative;
+    top: -4px;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {
+            padding-right:18px
+    }
+}
+
+label {position:relative}
+    label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    /*right:8px; top:2px;*/
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#f8f8f8;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+.halign, .valign, .colorchooser{
+   width:50px;
+   height:20px;
+   font-size:15px;
+   line-height:20px;
+    text-align: center;
+}
+
+.colorchooser{
+   width:50px;
+    font-size:12px;
+
+}
+.colorbtn
+{
+    height:10px;
+    padding: 0px;
+    width: 24px;
+}
+
+.fclrBox, .bgclrBox{
+    margin-right: 2px;
+}
+
+.docInformer{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 1%;
+    border-radius: 25px;
+    border: 1px solid rgb(144, 160, 214);
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: top;
+    background: rgb(193, 193, 238);
+    line-height: 19px;
+    color: whitesmoke;
+    top: 4px;
+    cursor: pointer;
+    z-index: 999;
+}
+}
+
+

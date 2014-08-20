@@ -1,0 +1,497 @@
+/*$Id$*/	
+
+	*{
+		box-sizing:border-box;
+	}
+
+	html{
+		/*overflow:scroll;*/
+		width: 100%;
+		height: 100%;
+	}
+
+	body{
+		margin: 0px;
+		-webkit-overflow-scrolling: touch;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		font-size: 12px;
+	}
+	
+	iframe {
+		position: absolute;
+		-webkit-overflow-scrolling:touch;
+		border: none;
+		
+	}
+
+	.iframe, .iframe2{
+		border-right: 1px ridge #8b8b8b;
+	}
+	.iframe3, .iframe{
+		border-bottom: 1px ridge #8b8b8b;
+	}
+
+	.rowHeadDivider {
+		background: -webkit-linear-gradient(right, white 0%, gray 30%);
+		width:35px;
+	}
+	
+	.contentDivider {
+		background:white;
+	width:100%;
+	}
+	
+	.sBarDivider {
+		width:21px;
+	}
+	
+	.vSP {
+		overflow:scroll;
+		width:21px;
+	}
+	
+	.hSP {
+		overflow:scroll;
+		height:17px;
+		left:35px;
+		position:relative;
+	}
+	
+	.sheetPaneContainer	{
+		position:relative;
+		overflow:hidden;
+	}
+	
+	.sheetPane {
+		overflow:hidden;
+		overflow: scroll;
+		height: 88%;
+		/*-webkit-overflow-scrolling: touch;*/
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transform: translateZ(0px);
+	}
+	
+	.GridHolder {
+		position:relative;
+		z-index: 10;
+		cursor: cell;
+	}
+
+	.RowHeader  {
+		position:absolute;
+		z-index: 10;
+
+	}
+	.RowHeader1  {
+		z-index: 5;
+		overflow-y: hidden;
+	}
+	
+	.sheetObjects {
+		position:relative;
+		overflow:visible;
+	}
+	
+	.contentExpander	{
+		left:0px;
+		top:0px;
+		height:1179648px;
+		width:20480px;
+		position:absolute;
+		overflow:hidden;
+ 		/*-webkit-transform-origin: 0px 0px;
+        -webkit-transform:scale(5, 5);*/	
+		
+	}
+
+	
+	
+	.rowHead {
+		overflow:hidden;
+		position:relative;
+		border-right: 1px solid rgb(180, 180, 180);
+		color: rgb(109, 107, 107);
+	}
+	.rowHead0 {
+		overflow:hidden;
+		position:relative;
+		border-right: 1px solid rgb(180, 180, 180);
+		color: rgb(109, 107, 107);
+
+	}
+
+
+	.colHead {
+		overflow:hidden;
+		position:relative;
+ 		height:18px;
+ 		/*background: -webkit-linear-gradient(bottom, white 0%, gray 30%);*/
+ 		border-bottom: 1px solid rgb(126, 115, 115);
+ 		color: rgb(109, 107, 107);
+
+	}
+	.colHead0 {
+		overflow:hidden;
+		position:relative;
+ 		height:18px;
+ 		/*background: -webkit-linear-gradient(bottom, white 0%, gray 30%);*/
+ 		border-bottom: 1px solid rgb(180, 180, 180)	;
+ 		color: rgb(109, 107, 107);
+	}
+
+	
+	.rowHeadExpander	{
+		/*height:1179648px;*/
+		width:1px;
+	}	
+	
+	
+/*	.rowHead > div {
+		position:absolute;
+		border-bottom:1px solid;
+		width:	36px;
+		text-align:center;
+	}*/
+	
+/*	.rowHead0 > div {
+		position:absolute;
+		border-bottom:1px solid;
+		width:	36px;
+		text-align:center;
+	}*/
+
+	.RowHeader > div {
+		/*overflow:hidden;
+		position:absolute;
+		border-bottom:1px solid;
+		width:	36px;*/
+		text-align:center;
+	}
+/*	.RowHeader1 > div {
+		overflow:hidden;
+		position:absolute;
+		border-bottom:1px solid;
+		width:	36px;
+		text-align:center;
+	}
+	*/
+
+	.dummyHead{
+		width:35px;
+		height:18px;
+		box-sizing:border-box;		
+	}
+	
+	
+	.colHeadExpander	{
+		width:20480px;
+		height:1px;
+	}
+
+	.colHead > div {
+		position:absolute;
+		border-right:1px solid;
+		height:18px;
+		text-align:center;
+		display: inline-flex;
+		display: -webkit-box;
+		cursor: s-resize;
+	}
+	.colHead0 > div {
+		position:absolute;
+		border-right:1px solid;
+		height:18px;
+		text-align:center;
+	}
+	
+
+	.tile{
+		position:absolute;
+		width:	0px;
+		height:	0px;
+		overflow:visible;
+	}
+		.mC {
+		overflow: hidden;
+		padding :	0px 2px;
+		position: absolute;
+	}
+	.tile > div{
+	overflow: hidden;
+		padding :	0px 2px;
+		position: absolute;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+	
+	
+	.canvas	{
+		position	:	absolute;
+	}
+
+    .uiselector{
+        background: #DEF1FA; /* Old browsers */
+        margin: 1px;
+        border: solid 1px deepskyblue;
+        position: absolute;
+        z-index: 0;
+        opacity: 14;
+        top: 0px;
+        left: 0px;
+        opacity: 0.3;
+    }
+
+
+    .widgetLayer{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -moz-box-direction: normal;
+        -moz-box-orient: horizontal;
+
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .markupTemplate{
+        height: 18px;
+        width: 35px;
+        background: gray;
+        border-bottom: 1px solid rgb(180, 180, 180);
+        border-right: 1px solid rgb(180, 180, 180);
+        border-top: 1px solid rgb(180, 180, 180);
+        background: #ffffff; /* Old browsers */
+		background: -moz-linear-gradient(-45deg,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(-45deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+		background: linear-gradient(135deg,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		cursor: se-resize;
+
+    }
+
+    .rowHeader{
+        width: 100%;
+        height: 18px;
+    }
+
+    .colHead{
+        border-right:1px solid;
+        width: 100%;
+        height: 18px;
+    }
+
+    .rowHead{
+        width: 35px;
+        height: 100%;	/* firefox*/
+        border-bottom:1px solid rgb(126, 115, 115);
+        border-right:1px solid rgb(126, 115, 115);
+    }
+    .grid{
+        width: 100%;
+    }
+    .SheetsList{
+    	width: 100%;
+    	height: 6%;
+    	border-top: 1px solid rgb(180, 180, 180);
+    	position: relative;
+    	border-left: 1px solid rgb(180, 180, 180);
+		border-bottom: 1px solid;
+		background: rgb(224, 224, 224);
+		left: -18px;
+		display:-webkit-box;
+		display: -webkit-flex;
+		line-height: 25px;
+		display: flex
+		
+    }
+
+    .toolbar{
+    	width: 100%;
+    	height: 24px;
+    	border-top: 1px solid rgb(180, 180, 180);
+    }
+
+    .formularBar{
+    	background: rgb(240, 240, 240);
+    	display: flex;
+    }
+
+    .sheetUI{
+    	position: relative;
+		display: inline-block;
+		margin: 0px;
+		border-right: 1px solid rgb(180, 180, 180);
+		height: 25px;
+		padding: 2px;
+    }
+     .sheetUI:hover{
+    		background: gray;
+    }
+    .sheetUI:hover{
+    	cursor: pointer;
+    }
+
+    
+
+.colW{
+	border-right: 1px ridge rgb(221, 215, 215);
+    z-index: 0;
+	/*height: inherit;*/
+	overflow: hidden;
+	/*height: 1179648px;*/
+}
+
+.rowH{
+	border-bottom: 1px solid rgb(221, 215, 215);
+    z-index: 0;
+	/*width: inherit;*/
+	overflow: hidden;
+	text-align: left;
+	padding-left: 10px;
+	position: relative;
+	/*display: flex;*/
+}
+
+.ColsHolder{
+    position: absolute;
+     display: inline-flex;
+    top: 0px;
+}
+
+.RowsHolder{
+  /*position: absolute;*/
+
+  left: 0px;
+}
+
+.ColsHolder < div{
+  left: 0px;
+}
+
+.cell{
+	position: absolute;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	overflow-wrap: break-word;
+	border-collapse: collapse;
+	font-size: 12px;
+	padding: 2px;
+}
+
+.grayGradient{
+ 	background: rgb(238, 238, 238);
+}
+
+.ColHeader1{
+	overflow-x: scroll;
+	border-top: 1px solid rgb(126, 115, 115);
+	border-bottom: 1px solid rgb(126, 115, 115);
+
+}
+.rowHead > div{
+	cursor: e-resize;
+	text-align: center;
+}
+
+#main{
+	visibility: hidden;
+}
+
+
+.halignContainer, .valignContainer, .colorsContainer, .colorsInnerContainer{
+	display:-webkit-box;
+	display: flex;
+	align-self: center;
+	align-items: center;
+	margin-right: 12px;
+	/*flex-direction: row;*/
+}
+
+.clrBox{
+	width: 18px;
+	height: 20px;
+}
+
+.colorsInnerContainer{
+	flex-direction:row;
+
+}
+
+.rowdisplay{
+	display: flex;
+	display: -webkit-box;
+	flex-direction:row;
+}
+
+.docInfo{
+	position: absolute;
+	top: 100px;
+	left: 10px;
+	background: rgb(252, 252, 236);
+	border: 1px solid rgb(201, 201, 150);
+	padding: 10px;
+	border-radius: 8px;
+	display: none;
+}
+
+.celldisplay{
+	width: 120px;
+	height: 20px;
+	text-transform:capitalize;
+}
+
+
+.bottomBar{
+    top: 92%;
+    width: 102%    
+}
+
+.selectedHeader {
+	background: rgb(206, 203, 203);
+	border-right: 1px solid rgb(153, 138, 138);
+	border-left: 1px solid rgb(153, 138, 138);
+}
+
+.cellcomment{
+	width: 160px;
+	height: 100px;
+	position: absolute;
+	background: rgb(241, 241, 235);
+	-webkit-box-shadow: inset 0 0 1em gold;
+	-webkit-box-shadow: inset 0 0 1em gold;
+    box-shadow: inset 0 0 1em gold;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+	flex-direction: column;
+	padding: 10px;
+	overflow-y: scroll;
+	display: none;
+	z-index: 9999;
+}
+
+.commentIcon {
+	background-image:  -webkit-gradient(linear, left top, left bottom, from(#C92C0E), to(#F3D1CD)); /* Saf4+, Chrome */
+	background-image:  -webkit-linear-gradient(top, #C92C0E, #F3D1CD); /* Chrome 10+, Saf5.1+ */
+	background-image:  -moz-linear-gradient(top, #C92C0E, #F3D1CD); /* FF3.6+ */
+	background-image:  -ms-linear-gradient(top, #C92C0E, #F3D1CD); /* IE10 */
+	background-image:  -o-linear-gradient(top, #C92C0E, #F3D1CD); /* Opera 11.10+ */
+	background-image: linear-gradient(to bottom, #C92C0E, #F3D1CD); /* W3C */
+	background-repeat: no-repeat;
+	background-size: 6px 5px;
+	background-position: 99% 0%;
+}

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>View XLSX Files </title>
+  <link rel="stylesheet" type="text/css" href="styles/sheet.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/toolbar.css"/>
+</head>
+
+<body>
+	<div id="container">
+		
+		<ol id="demo-container">
+			<li>
+				<label>
+					<span class="form-label">choose a xlsx file</span>
+					<input type="file" accept="application/zip" id="file-input">
+				</label>
+			</li>
+			<li style="display:none">
+				<label>
+					<span class="form-label">choose temporary storage</span>
+					<select id="creation-method-input">
+						<option value="Blob">RAM</option>
+						<option value="File">HDD</option>
+					</select>
+				</label>
+			</li>
+			
+		</ol>
+
+	</div>
+
+	<div id="main">
+    <div class="actionsBar toolbar">
+
+           <div class="bold btn">B</div>
+           <div class="underline btn">U</div>
+           <div class="italic btn">I</div>
+           <div class="strikethrough btn">S</div>
+
+            <select class="fontFamily">
+                <option value="Arial">Arial</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="serif">serif</option>
+                        <option value="Book Antiqua">Book Antiqua</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Times">Times</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Gadget">Gadget</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Charcoal">Charcoal</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Lucida Grande">Lucida Grande</option>
+                        <option value="Tahoma">Geneva</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="monospace">monospace</option>        
+            </select>
+                <select class="fontSize">
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                        <option value="28">28</option>
+                        <option value="30">30</option>
+                        <option value="32">32</option>
+                        <option value="34">34</option>
+                        <option value="36">36</option>
+                        <option value="38">38</option>        
+            </select>
+             <span class="colorsContainer">
+                 <div class="colorsInnerContainer" >
+                    <div class="fclrBox">A</div>
+                    <input class="fontcolor" type="color" name="favcolor"/>
+                </div>
+                <div class="colorsInnerContainer" >
+                    <div class="bgclrBox"></div>
+                     <input class="bgcolor" type="color" name="favcolor"/>  
+                </div>
+              
+            </span>
+
+            <div class="docInformer">i</div>
+    </div>
+    <div class="formularBar toolbar">
+        <div class="formulaSymbol">f<SUP>x</SUP></div>
+        <div class="formulaInputBox"></div>
+    </div>
+    
+    <div class="widgetLayer">
+
+        <div class="markupTemplate">
+        </div>
+
+        <div class = "colHead0 grayGradient">
+            <div class = "ColHeader"></div>
+        </div>
+
+        <div class="colHead grayGradient">
+            <div class="colHeadExpander"></div>
+            <div class="ColHeader1"></div>
+        </div>
+
+    </div>
+
+    <div class="widgetLayer">
+
+          <div>
+              <div class = "rowHead0 grayGradient">
+                 <div class = "RowHeader"></div>
+              </div>
+              <div class = "rowHead grayGradient">
+                  <div  class = "rowHeadExpander"></div>
+                  <div class = "RowHeader1"></div>
+              </div>
+          </div>
+
+        <div class="grid">
+                  <div class ="sheetPaneContainer">
+                    <div class  ="sheetPane">
+                      <div class="GridHolder">
+                          <div class="RowsHolder">
+                        
+                          </div>  
+                          <div class="ColsHolder">
+                        
+                          </div>  
+                          <div class="CellsHolder">
+                            
+                          </div>
+                      </div>
+
+                    </div>
+                  </div>
+        </div>
+        
+    </div>
+
+    <div class="widgetLayer bottomBar">
+      <div class="hSP">
+            <div class="hST"></div> 
+        </div>
+        <div class="SheetsList">
+        <div class="sheetUI" style="width: 35px;"></div>
+        </div> 
+        
+    </div>
+</div>
+
+<script src="x2js-master/xml2json.js"></script>
+<script src="zipjs/WebContent/zip.js"></script>
+<script src="js/Registers.js"></script>
+<script src="js/NewUtils.js"></script>
+<script src="js/Init.js"></script>
+<script src="js/Mediator.js"></script>
+<script src="js/UIInit.js"></script>
+<script src="js/XLSXParser.js"></script>
+<script src="js/UIFormation.js"></script>
+<script src="js/SheetList.js"></script>
+<script src="js/SheetColsData.js"></script>
+
+<script src="js/RowsHolder.js"></script>
+<script src="js/RowHeader.js"></script>
+<script src="js/ColsHeader.js"></script>
+<script src="js/ColsHolder.js"></script>
+<script src="js/CellsHolder.js"></script>
+<script src="js/MouseBinder.js"></script>
+<script src="js/SheetOperations.js"></script>
+<script src="js/CellFormat.js"></script>
+<script src="js/FileInfo.js"></script>
+<script src="js/ContentAppearance.js"></script>
+<script src="js/CellIndexFinder.js"></script>
+<script src="js/UISelector.js"></script>
+<script src="js/CellComment.js"></script>
+<script src="js/Formulabar.js"></script>
+<script src="js/ApplyFormat.js"></script>
+<script src="js/tmp.js"></script>
+
+</body>
+</html>
+

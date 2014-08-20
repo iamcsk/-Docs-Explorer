@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Read a zip file demo</title>
+</head>
+
+<body>
+	<div id="container">
+		
+		<ol id="demo-container">
+			<li>
+				<label>
+					<span class="form-label">choose a zip file</span>
+					<input type="file" accept="application/zip" id="file-input">
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">choose temporary storage</span>
+					<select id="creation-method-input">
+						<option value="Blob">RAM</option>
+						<option value="File">HDD</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<span class="form-label">download zip content</span>
+				<ul id="file-list">
+				</ul>
+			</li>
+		</ol>
+
+	</div>
+	<script type="text/javascript" src="zipjs/WebContent/zip.js"></script>
+	<script type="text/javascript" src="demo2.js"></script>
+
+</body>
+</html>
+
+
+for(var x in zdocs.catches[1]){
+ 	if(!isNaN(x)){
+ 		console.log(x, !isNaN(x))
+	}
+}
+
+
+
+for(var x in zdocs.catches[1]){
+ 	if(!isNaN(x)){
+ 		console.log(x, !isNaN(x), zdocs.catches[1][x]); for(var j in  zdocs.catches[1][x]){ console.log(j);} 
+	}
+}
